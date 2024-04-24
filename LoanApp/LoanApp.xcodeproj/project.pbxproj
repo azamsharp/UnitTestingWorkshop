@@ -14,6 +14,9 @@
 		8DBD55A32BD35B9D00CEF757 /* LoanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD55A22BD35B9D00CEF757 /* LoanAppTests.swift */; };
 		8DBD55AB2BD35BBF00CEF757 /* APRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD55AA2BD35BBF00CEF757 /* APRService.swift */; };
 		8DBD55AD2BD3605D00CEF757 /* credit-score-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD55AC2BD3605D00CEF757 /* credit-score-response.json */; };
+		8DC0324D2BD57D1B00C9D230 /* MockedHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0324C2BD57D1B00C9D230 /* MockedHTTPClient.swift */; };
+		8DC032502BD57DCB00C9D230 /* CreditScoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0324F2BD57DCB00C9D230 /* CreditScoreResponse.swift */; };
+		8DC032532BD5853800C9D230 /* CreditScoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC032522BD5853800C9D230 /* CreditScoreError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		8DBD55A22BD35B9D00CEF757 /* LoanAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanAppTests.swift; sourceTree = "<group>"; };
 		8DBD55AA2BD35BBF00CEF757 /* APRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APRService.swift; sourceTree = "<group>"; };
 		8DBD55AC2BD3605D00CEF757 /* credit-score-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "credit-score-response.json"; sourceTree = "<group>"; };
+		8DC0324C2BD57D1B00C9D230 /* MockedHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedHTTPClient.swift; sourceTree = "<group>"; };
+		8DC0324F2BD57DCB00C9D230 /* CreditScoreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreResponse.swift; sourceTree = "<group>"; };
+		8DC032522BD5853800C9D230 /* CreditScoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		8DBD558D2BD35B2F00CEF757 /* LoanApp */ = {
 			isa = PBXGroup;
 			children = (
+				8DC032512BD5852A00C9D230 /* Custom Errors */,
+				8DC0324E2BD57DBF00C9D230 /* Models */,
 				8DBD55A92BD35BB200CEF757 /* Services */,
 				8DBD558E2BD35B2F00CEF757 /* LoanAppApp.swift */,
 				8DBD55902BD35B2F00CEF757 /* ContentView.swift */,
@@ -99,6 +107,7 @@
 			children = (
 				8DBD55A22BD35B9D00CEF757 /* LoanAppTests.swift */,
 				8DBD55AC2BD3605D00CEF757 /* credit-score-response.json */,
+				8DC0324C2BD57D1B00C9D230 /* MockedHTTPClient.swift */,
 			);
 			path = LoanAppTests;
 			sourceTree = "<group>";
@@ -109,6 +118,22 @@
 				8DBD55AA2BD35BBF00CEF757 /* APRService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8DC0324E2BD57DBF00C9D230 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DC0324F2BD57DCB00C9D230 /* CreditScoreResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DC032512BD5852A00C9D230 /* Custom Errors */ = {
+			isa = PBXGroup;
+			children = (
+				8DC032522BD5853800C9D230 /* CreditScoreError.swift */,
+			);
+			path = "Custom Errors";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +239,8 @@
 			files = (
 				8DBD55912BD35B2F00CEF757 /* ContentView.swift in Sources */,
 				8DBD55AB2BD35BBF00CEF757 /* APRService.swift in Sources */,
+				8DC032502BD57DCB00C9D230 /* CreditScoreResponse.swift in Sources */,
+				8DC032532BD5853800C9D230 /* CreditScoreError.swift in Sources */,
 				8DBD558F2BD35B2F00CEF757 /* LoanAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBD55A32BD35B9D00CEF757 /* LoanAppTests.swift in Sources */,
+				8DC0324D2BD57D1B00C9D230 /* MockedHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

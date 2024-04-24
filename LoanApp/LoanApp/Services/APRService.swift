@@ -7,26 +7,10 @@
 
 import Foundation
 
+
+
 protocol HTTPClientProtocol {
     func getCreditScore(ssn: String) async throws -> Int?
-}
-
-struct MockHTTPClient: HTTPClientProtocol {
-    
-    func getCreditScore(ssn: String) async throws -> Int? {
-        
-        if let path = Bundle.main.path(forResource: "credit-score-response", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(filePath: path, relativeTo: nil))
-                let result = try JSONDecoder().decode([String: Int].self, from: data)
-                return result["score"]
-            } catch {
-                return nil
-            }
-        }
-        
-        return nil
-    }
 }
 
 struct HTTPClient: HTTPClientProtocol {
@@ -37,10 +21,10 @@ struct HTTPClient: HTTPClientProtocol {
         let url = URL(string: "https://island-bramble.glitch.me/api/credit-score/\(ssn)")!
         let (data, _) = try await URLSession.shared.data(from: url)
         
-        let result = try JSONDecoder().decode([String: Int].self, from: data)
+        let result = try JSONDecoder().decode(CreditScoreResponse.self, from: data)
         
         // real HTTPClient
-        return result["score"]
+        return result.score 
     }
 }
 
@@ -54,10 +38,11 @@ struct APRService {
     
     func calculateAPR(ssn: String) async throws -> Double {
         
-        let creditScore = try await httpClient.getCreditScore(ssn: ssn)
+        guard let creditScore = try await httpClient.getCreditScore(ssn: ssn) else {
+            throw CreditScoreError.noCreditScoreFound
+        }
         
-        
-        if creditScore! > 650 {
+        if creditScore > 650 {
             return 3.124
         } else {
             return 6.24

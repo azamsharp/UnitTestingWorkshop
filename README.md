@@ -11,13 +11,11 @@ Xcode 15.x installed on your system.
 ### Unit Testing 
 - [Download Budget App Final Project](BudgetApp.zip)
 
-## Mocking 
-- 
-
-## Integration Testing 
+## Integration Testing and Mocking 
+- [Unit Testing vs Integration Testing](https://circleci.com/blog/unit-testing-vs-integration-testing/)
+- [Download Loan App Final Project](LoanApp.zip)
 
 ## End-to-End Testing 
-
 
 ## Resources 
 - [TDD, Where Did It All Go Wrong (Ian Cooper)](https://youtu.be/EZ05e7EMOLM?si=QDfLTerjYkA1D-UD)
