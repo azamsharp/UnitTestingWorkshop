@@ -13,29 +13,30 @@ final class LoanAppTests: XCTestCase {
     func testCalculateAPRInvokesGetCreditScore() async throws {
         
         let expectation = XCTestExpectation(description: "Credit Score service was invoked.")
-        var httpClient = MockHTTPClient()
+        var creditScoreService = MockedCreditScoreService()
         
-        httpClient.onGetCreditScore = { ssn in
+        creditScoreService.onGetCreditScore = { ssn in
             XCTAssertEqual(ssn, "345-34-2345", "Expected SSN to be 345-34-2345")
             expectation.fulfill()
             return 720
         }
         
-        let aprService = APRService(httpClient: httpClient)
+        let aprService = APRService(creditScoreService: creditScoreService)
         let _ = try await aprService.calculateAPR(ssn: "345-34-2345")
         
-        await XCTWaiter().fulfillment(of: [expectation], timeout: 5)
+        let result = await XCTWaiter().fulfillment(of: [expectation], timeout: 5)
+        XCTAssertEqual(result, .completed)
     }
     
     func testCalculateAPR() async throws {
         
-        var httpClient = MockHTTPClient()
+        var creditScoreService = MockedCreditScoreService()
         
-        httpClient.onGetCreditScore = { ssn in
+        creditScoreService.onGetCreditScore = { ssn in
             return 720
         }
         
-        let aprService = APRService(httpClient: httpClient)
+        let aprService = APRService(creditScoreService: creditScoreService)
         let apr = try await aprService.calculateAPR(ssn: "345-34-2345")
         XCTAssertEqual(3.124, apr)
         
@@ -43,7 +44,7 @@ final class LoanAppTests: XCTestCase {
     
     func testThrowExceptionWhenCreditScoreNotFound() async throws {
         
-        let aprService = APRService(httpClient: MockHTTPClient())
+        let aprService = APRService(creditScoreService: MockedCreditScoreService())
         
         do {
             let apr = try await aprService.calculateAPR(ssn: "444-44-4444")

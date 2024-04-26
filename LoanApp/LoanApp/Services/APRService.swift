@@ -9,16 +9,21 @@ import Foundation
 
 
 
-protocol HTTPClientProtocol {
+protocol CreditScoreServiceProtocol {
     func getCreditScore(ssn: String) async throws -> Int?
 }
 
-struct HTTPClient: HTTPClientProtocol {
+struct CreditScoreService: CreditScoreServiceProtocol {
     
-    // THIS IS UNMANAGED DEPENDENCY
+    let baseURL: URL
+    
+    // THIS IS UNMANAGED DEPENDENCY THIS IS THE TEST URL PROVIDED BY THE CREDIT SCORE COMPANY
     func getCreditScore(ssn: String) async throws -> Int? {
         
-        let url = URL(string: "https://island-bramble.glitch.me/api/credit-score/\(ssn)")!
+        var url = baseURL
+        url.append(path: "/api/credit-score/\(ssn)")
+        
+        //let url = URL(string: "https://island-bramble.glitch.me/api/credit-score/\(ssn)")!
         let (data, _) = try await URLSession.shared.data(from: url)
         
         let result = try JSONDecoder().decode(CreditScoreResponse.self, from: data)
@@ -30,15 +35,15 @@ struct HTTPClient: HTTPClientProtocol {
 
 struct APRService {
     
-    private var httpClient: HTTPClientProtocol
+    private var creditScoreService: CreditScoreServiceProtocol
     
-    init(httpClient: HTTPClientProtocol) {
-        self.httpClient = httpClient
+    init(creditScoreService: CreditScoreServiceProtocol) {
+        self.creditScoreService = creditScoreService
     }
     
     func calculateAPR(ssn: String) async throws -> Double {
         
-        guard let creditScore = try await httpClient.getCreditScore(ssn: ssn) else {
+        guard let creditScore = try await creditScoreService.getCreditScore(ssn: ssn) else {
             throw CreditScoreError.noCreditScoreFound
         }
         

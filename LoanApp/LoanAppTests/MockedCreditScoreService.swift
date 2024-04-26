@@ -8,7 +8,7 @@
 import Foundation
 @testable import LoanApp
 
-struct MockHTTPClient: HTTPClientProtocol {
+struct MockedCreditScoreService: CreditScoreServiceProtocol {
     
     var onGetCreditScore: ((String) -> Int?)?
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D4C962D2BD999BA00B39976 /* MockedCreditScoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C962C2BD999BA00B39976 /* MockedCreditScoreService.swift */; };
 		8DBD558F2BD35B2F00CEF757 /* LoanAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD558E2BD35B2F00CEF757 /* LoanAppApp.swift */; };
 		8DBD55912BD35B2F00CEF757 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD55902BD35B2F00CEF757 /* ContentView.swift */; };
 		8DBD55932BD35B3100CEF757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD55922BD35B3100CEF757 /* Assets.xcassets */; };
@@ -14,9 +15,10 @@
 		8DBD55A32BD35B9D00CEF757 /* LoanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD55A22BD35B9D00CEF757 /* LoanAppTests.swift */; };
 		8DBD55AB2BD35BBF00CEF757 /* APRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBD55AA2BD35BBF00CEF757 /* APRService.swift */; };
 		8DBD55AD2BD3605D00CEF757 /* credit-score-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DBD55AC2BD3605D00CEF757 /* credit-score-response.json */; };
-		8DC0324D2BD57D1B00C9D230 /* MockedHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0324C2BD57D1B00C9D230 /* MockedHTTPClient.swift */; };
+		8DC0324D2BD57D1B00C9D230 /* MockedCreditScoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0324C2BD57D1B00C9D230 /* MockedCreditScoreService.swift */; };
 		8DC032502BD57DCB00C9D230 /* CreditScoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0324F2BD57DCB00C9D230 /* CreditScoreResponse.swift */; };
 		8DC032532BD5853800C9D230 /* CreditScoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC032522BD5853800C9D230 /* CreditScoreError.swift */; };
+		8DD4C5C82BD9522B0056FE9C /* LoanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4C5C72BD9522B0056FE9C /* LoanAppUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +29,17 @@
 			remoteGlobalIDString = 8DBD558A2BD35B2F00CEF757;
 			remoteInfo = LoanApp;
 		};
+		8DD4C5CB2BD9522B0056FE9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DBD55832BD35B2F00CEF757 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DBD558A2BD35B2F00CEF757;
+			remoteInfo = LoanApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D4C962C2BD999BA00B39976 /* MockedCreditScoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedCreditScoreService.swift; sourceTree = "<group>"; };
 		8DBD558B2BD35B2F00CEF757 /* LoanApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoanApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBD558E2BD35B2F00CEF757 /* LoanAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanAppApp.swift; sourceTree = "<group>"; };
 		8DBD55902BD35B2F00CEF757 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,9 +49,11 @@
 		8DBD55A22BD35B9D00CEF757 /* LoanAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanAppTests.swift; sourceTree = "<group>"; };
 		8DBD55AA2BD35BBF00CEF757 /* APRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APRService.swift; sourceTree = "<group>"; };
 		8DBD55AC2BD3605D00CEF757 /* credit-score-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "credit-score-response.json"; sourceTree = "<group>"; };
-		8DC0324C2BD57D1B00C9D230 /* MockedHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedHTTPClient.swift; sourceTree = "<group>"; };
+		8DC0324C2BD57D1B00C9D230 /* MockedCreditScoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedCreditScoreService.swift; sourceTree = "<group>"; };
 		8DC0324F2BD57DCB00C9D230 /* CreditScoreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreResponse.swift; sourceTree = "<group>"; };
 		8DC032522BD5853800C9D230 /* CreditScoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreError.swift; sourceTree = "<group>"; };
+		8DD4C5C52BD9522B0056FE9C /* LoanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD4C5C72BD9522B0056FE9C /* LoanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanAppUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DD4C5C22BD9522B0056FE9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +86,7 @@
 			children = (
 				8DBD558D2BD35B2F00CEF757 /* LoanApp */,
 				8DBD55A12BD35B9D00CEF757 /* LoanAppTests */,
+				8DD4C5C62BD9522B0056FE9C /* LoanAppUITests */,
 				8DBD558C2BD35B2F00CEF757 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +96,7 @@
 			children = (
 				8DBD558B2BD35B2F00CEF757 /* LoanApp.app */,
 				8DBD55A02BD35B9D00CEF757 /* LoanAppTests.xctest */,
+				8DD4C5C52BD9522B0056FE9C /* LoanAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				8DBD55952BD35B3100CEF757 /* Preview Assets.xcassets */,
+				8D4C962C2BD999BA00B39976 /* MockedCreditScoreService.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -107,7 +129,7 @@
 			children = (
 				8DBD55A22BD35B9D00CEF757 /* LoanAppTests.swift */,
 				8DBD55AC2BD3605D00CEF757 /* credit-score-response.json */,
-				8DC0324C2BD57D1B00C9D230 /* MockedHTTPClient.swift */,
+				8DC0324C2BD57D1B00C9D230 /* MockedCreditScoreService.swift */,
 			);
 			path = LoanAppTests;
 			sourceTree = "<group>";
@@ -134,6 +156,14 @@
 				8DC032522BD5853800C9D230 /* CreditScoreError.swift */,
 			);
 			path = "Custom Errors";
+			sourceTree = "<group>";
+		};
+		8DD4C5C62BD9522B0056FE9C /* LoanAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8DD4C5C72BD9522B0056FE9C /* LoanAppUITests.swift */,
+			);
+			path = LoanAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +204,24 @@
 			productReference = 8DBD55A02BD35B9D00CEF757 /* LoanAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8DD4C5C42BD9522B0056FE9C /* LoanAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DD4C5CF2BD9522B0056FE9C /* Build configuration list for PBXNativeTarget "LoanAppUITests" */;
+			buildPhases = (
+				8DD4C5C12BD9522B0056FE9C /* Sources */,
+				8DD4C5C22BD9522B0056FE9C /* Frameworks */,
+				8DD4C5C32BD9522B0056FE9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DD4C5CC2BD9522B0056FE9C /* PBXTargetDependency */,
+			);
+			name = LoanAppUITests;
+			productName = LoanAppUITests;
+			productReference = 8DD4C5C52BD9522B0056FE9C /* LoanAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +236,10 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					8DBD559F2BD35B9D00CEF757 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 8DBD558A2BD35B2F00CEF757;
+					};
+					8DD4C5C42BD9522B0056FE9C = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 8DBD558A2BD35B2F00CEF757;
 					};
@@ -208,6 +260,7 @@
 			targets = (
 				8DBD558A2BD35B2F00CEF757 /* LoanApp */,
 				8DBD559F2BD35B9D00CEF757 /* LoanAppTests */,
+				8DD4C5C42BD9522B0056FE9C /* LoanAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +283,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DD4C5C32BD9522B0056FE9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -240,6 +300,7 @@
 				8DBD55912BD35B2F00CEF757 /* ContentView.swift in Sources */,
 				8DBD55AB2BD35BBF00CEF757 /* APRService.swift in Sources */,
 				8DC032502BD57DCB00C9D230 /* CreditScoreResponse.swift in Sources */,
+				8D4C962D2BD999BA00B39976 /* MockedCreditScoreService.swift in Sources */,
 				8DC032532BD5853800C9D230 /* CreditScoreError.swift in Sources */,
 				8DBD558F2BD35B2F00CEF757 /* LoanAppApp.swift in Sources */,
 			);
@@ -250,7 +311,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBD55A32BD35B9D00CEF757 /* LoanAppTests.swift in Sources */,
-				8DC0324D2BD57D1B00C9D230 /* MockedHTTPClient.swift in Sources */,
+				8DC0324D2BD57D1B00C9D230 /* MockedCreditScoreService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD4C5C12BD9522B0056FE9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD4C5C82BD9522B0056FE9C /* LoanAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +330,11 @@
 			isa = PBXTargetDependency;
 			target = 8DBD558A2BD35B2F00CEF757 /* LoanApp */;
 			targetProxy = 8DBD55A42BD35B9D00CEF757 /* PBXContainerItemProxy */;
+		};
+		8DD4C5CC2BD9522B0056FE9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DBD558A2BD35B2F00CEF757 /* LoanApp */;
+			targetProxy = 8DD4C5CB2BD9522B0056FE9C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -478,6 +552,40 @@
 			};
 			name = Release;
 		};
+		8DD4C5CD2BD9522B0056FE9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2Q8EGNCQA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azamsharp.LoanAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LoanApp;
+			};
+			name = Debug;
+		};
+		8DD4C5CE2BD9522B0056FE9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B2Q8EGNCQA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azamsharp.LoanAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LoanApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -504,6 +612,15 @@
 			buildConfigurations = (
 				8DBD55A72BD35B9D00CEF757 /* Debug */,
 				8DBD55A82BD35B9D00CEF757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DD4C5CF2BD9522B0056FE9C /* Build configuration list for PBXNativeTarget "LoanAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DD4C5CD2BD9522B0056FE9C /* Debug */,
+				8DD4C5CE2BD9522B0056FE9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

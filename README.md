@@ -17,6 +17,9 @@ Xcode 15.x installed on your system.
 
 ## End-to-End Testing 
 
+- [Download Loan App End-to-End Test Project](LoanApp-end-to-end-test.zip) 
+- [How to manage build settings using Xcode configuration files](https://www.danijelavrzan.com/posts/2022/11/xcode-configuration/)
+
 ## Resources 
 - [TDD, Where Did It All Go Wrong (Ian Cooper)](https://youtu.be/EZ05e7EMOLM?si=QDfLTerjYkA1D-UD)
 - [Unit Testing Principles, Practices, and Patterns](https://a.co/d/6XjHFDK)

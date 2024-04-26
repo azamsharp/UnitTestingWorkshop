@@ -9,24 +9,43 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var name: String = ""
     @State private var ssn: String = ""
-    @State private var loanAmount: Double = 0.0 
+    let aprService: APRService
     
+    @State private var apr: Double?
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TextField("Enter SSN", text: $ssn)
+                .textFieldStyle(.roundedBorder)
+                .accessibilityIdentifier("ssnTextField")
+            Button("Submit") {
+                Task {
+                    do {
+                        apr = try await aprService.calculateAPR(ssn: ssn)
+                    } catch {
+                        print(error)
+                    }
+                }
+                
+            }.accessibilityIdentifier("submitButton")
+            
+            if let apr {
+                Text(String(format: "%.3f", apr))
+                    .accessibilityIdentifier("aprLabel")
+            }
+            
+            Spacer()
         }
         .padding()
-        .navigationTitle("Apply for Loan")
+        .navigationTitle("Calculate APR")
     }
 }
 
+
 #Preview {
     NavigationStack {
-        ContentView()
+        // But MockedHTTPClient is in the testing target
+        ContentView(aprService: APRService(creditScoreService: MockedCreditScoreService()))
     }
 }
