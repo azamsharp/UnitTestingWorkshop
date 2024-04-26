@@ -26,3 +26,5 @@ Xcode 15.x installed on your system.
 - [TDD, Where Did It All Go Wrong (Ian Cooper)](https://youtu.be/EZ05e7EMOLM?si=QDfLTerjYkA1D-UD)
 - [Unit Testing Principles, Practices, and Patterns](https://a.co/d/6XjHFDK)
 - [Test Driven Development: By Example](https://a.co/d/cZwpuFc)
+- [Managing Environments in iOS](https://sarunw.com/posts/how-to-set-up-ios-environments/)
+- [Managing different iOS build configurations in Xcode](https://tanaschita.com/20220214-managing-different-ios-environments-in-xcode/)
