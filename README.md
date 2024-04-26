@@ -8,6 +8,8 @@ Familiarity with Swift Language.
 Basic understanding of SwiftUI.
 Xcode 15.x installed on your system.
 
+[Download the Slides](slides.pdf)
+
 ### Unit Testing 
 - [Download Budget App Final Project](BudgetApp.zip)
 
