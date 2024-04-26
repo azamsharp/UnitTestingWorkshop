@@ -1,4 +1,4 @@
-# Introduction to Testing in iOS
+# Introduction to Testing in iOS Workshop
 
 ### Prerequisites
 
