@@ -15,6 +15,7 @@ Xcode 15.x installed on your system.
 
 ## Integration Testing and Mocking 
 - [Unit Testing vs Integration Testing](https://circleci.com/blog/unit-testing-vs-integration-testing/)
+- [Download Loan App Starter Project](LoanStarter/LoanApp-Starter.zip)
 - [Download Loan App Final Project](LoanApp.zip)
 
 ## End-to-End Testing 
