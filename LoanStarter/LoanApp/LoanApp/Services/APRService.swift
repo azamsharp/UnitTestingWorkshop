@@ -31,8 +31,10 @@ struct CreditScoreService: CreditScoreServiceProtocol {
     }
 }
 
+// our own service
 struct APRService {
     
+    // third party service
     private var creditScoreService: CreditScoreServiceProtocol
     
     init(creditScoreService: CreditScoreServiceProtocol) {

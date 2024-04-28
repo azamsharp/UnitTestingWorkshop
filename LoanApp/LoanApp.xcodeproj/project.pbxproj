@@ -21,6 +21,8 @@
 		8DC4E3BE2BDC6D8700F0CDA1 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC4E3BD2BDC6D8700F0CDA1 /* RegistrationScreen.swift */; };
 		8DC4E3C12BDC6E6200F0CDA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC4E3C02BDC6E6200F0CDA1 /* String+Extensions.swift */; };
 		8DC4E3C32BDC6EF300F0CDA1 /* RegistrationScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC4E3C22BDC6EF300F0CDA1 /* RegistrationScreenTests.swift */; };
+		8DC4E3C52BDD400E00F0CDA1 /* CustomerListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC4E3C42BDD400E00F0CDA1 /* CustomerListScreen.swift */; };
+		8DC4E3C72BDD496100F0CDA1 /* CustomerListScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC4E3C62BDD496100F0CDA1 /* CustomerListScreenTests.swift */; };
 		8DD4C5C82BD9522B0056FE9C /* LoanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4C5C72BD9522B0056FE9C /* LoanAppUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		8DC4E3BD2BDC6D8700F0CDA1 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		8DC4E3C02BDC6E6200F0CDA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8DC4E3C22BDC6EF300F0CDA1 /* RegistrationScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenTests.swift; sourceTree = "<group>"; };
+		8DC4E3C42BDD400E00F0CDA1 /* CustomerListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListScreen.swift; sourceTree = "<group>"; };
+		8DC4E3C62BDD496100F0CDA1 /* CustomerListScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListScreenTests.swift; sourceTree = "<group>"; };
 		8DD4C5C52BD9522B0056FE9C /* LoanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD4C5C72BD9522B0056FE9C /* LoanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanAppUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +143,7 @@
 				8DBD55AC2BD3605D00CEF757 /* credit-score-response.json */,
 				8DC0324C2BD57D1B00C9D230 /* MockedCreditScoreService.swift */,
 				8DC4E3C22BDC6EF300F0CDA1 /* RegistrationScreenTests.swift */,
+				8DC4E3C62BDD496100F0CDA1 /* CustomerListScreenTests.swift */,
 			);
 			path = LoanAppTests;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC4E3BD2BDC6D8700F0CDA1 /* RegistrationScreen.swift */,
+				8DC4E3C42BDD400E00F0CDA1 /* CustomerListScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 				8DC4E3BE2BDC6D8700F0CDA1 /* RegistrationScreen.swift in Sources */,
 				8DBD55912BD35B2F00CEF757 /* ContentView.swift in Sources */,
 				8DBD55AB2BD35BBF00CEF757 /* APRService.swift in Sources */,
+				8DC4E3C52BDD400E00F0CDA1 /* CustomerListScreen.swift in Sources */,
 				8DC032502BD57DCB00C9D230 /* CreditScoreResponse.swift in Sources */,
 				8DC4E3C12BDC6E6200F0CDA1 /* String+Extensions.swift in Sources */,
 				8D4C962D2BD999BA00B39976 /* MockedCreditScoreService.swift in Sources */,
@@ -338,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBD55A32BD35B9D00CEF757 /* LoanAppTests.swift in Sources */,
+				8DC4E3C72BDD496100F0CDA1 /* CustomerListScreenTests.swift in Sources */,
 				8DC4E3C32BDC6EF300F0CDA1 /* RegistrationScreenTests.swift in Sources */,
 				8DC0324D2BD57D1B00C9D230 /* MockedCreditScoreService.swift in Sources */,
 			);

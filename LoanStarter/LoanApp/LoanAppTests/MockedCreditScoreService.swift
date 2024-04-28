@@ -10,7 +10,21 @@ import Foundation
 
 struct MockedCreditScoreService: CreditScoreServiceProtocol {
     
+    let ssnsWithNoCreditScores = ["444-44-4444", "222-22-2222"]
+    
+    var onGetCreditScore: ((String) -> Int?)?
+    
     func getCreditScore(ssn: String) async throws -> Int? {
-        return nil
+        
+        if ssnsWithNoCreditScores.contains(ssn) {
+            return nil
+        }
+        
+        //return 720
+        
+        return onGetCreditScore?(ssn)
     }
 }
+
+
+

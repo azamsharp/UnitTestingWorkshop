@@ -18,6 +18,7 @@ struct ContentView: View {
         VStack {
             TextField("Enter SSN", text: $ssn)
                 .textFieldStyle(.roundedBorder)
+                .accessibilityIdentifier("ssnTextField")
                 
             Button("Submit") {
                 Task {
@@ -28,11 +29,11 @@ struct ContentView: View {
                     }
                 }
                 
-            }
+            }.accessibilityIdentifier("submitButton")
             
             if let apr {
                 Text(String(format: "%.3f", apr))
-                   
+                    .accessibilityIdentifier("aprLabel")
             }
             
             Spacer()

@@ -25,7 +25,7 @@ struct LoanAppApp: App {
         
         if ProcessInfo.processInfo.arguments.contains("UITEST") {
             // Set the contained TEST URL
-            baseURL = URL(string: "https://island-bramble.glitch.me")!
+            baseURL = URL(string: "staging.island-bramble.glitch.me")!
         }
         
         let creditScoreService = CreditScoreService(baseURL: baseURL)
